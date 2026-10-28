@@ -5,11 +5,11 @@ Updated as each core step lands. The next agent should trust this file over the 
 | Step | State | Notes |
 | --- | --- | --- |
 | Docs and decision log | done | This folder. |
-| GitHub repo | not started | Private repo under Ankritjarngal, pushed after each core step. |
-| App scaffold | not started | FastAPI app, SQLite schema, requirements, `.env.example`. |
-| Scoring and ranking | not started | Real scorer plus fake scorer, pure rank functions. |
-| Player flow | not started | Login, timer, 3 images, 2 slots, own rank. |
-| Admin panel | not started | Privileges in [admin-panel.md](admin-panel.md). |
-| Tests | not started | Listed in [architecture.md](architecture.md). |
+| GitHub repo | done | Private repo `Ankritjarngal/prompt-wars`, branch `master`. |
+| App scaffold | done | FastAPI, SQLite, requirements, `.env.example`. |
+| Scoring and ranking | done | Real scorer in `app/scoring.py`. Tests use the fake scorer. |
+| Player flow | done | `/` login, timer, 3 images, 2 slots, own total and rank. |
+| Admin panel | done | Privileges in [admin-panel.md](admin-panel.md). Cut size is an editable number. |
+| Tests | done | `pytest` covers rules, a 60-person custom cut (30, then 37), and 60 parallel uploads. |
 
-Nothing under `app/` exists yet. Do not assume a route is live because the docs describe it. The docs describe the intended behavior.
+The app runs. `SKIP_MODELS=1` is a dry run and is what the tests use. Event day installs `requirements-scoring.txt` and leaves `SKIP_MODELS` unset. Round 2 and Round 3 still have no attempt pages.

@@ -1,0 +1,5 @@
+# Real Round 1 similarity. Install PyTorch CPU first, then this file:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-scoring.txt
+# Skip both and set SKIP_MODELS=1 for a dry run. Do not use that mode on event day.
+lpips==0.1.4

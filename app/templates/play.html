@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Wars</title>
+  <link rel="stylesheet" href="/static/play.css">
+</head>
+<body>
+  <main id="app">
+    <header class="top">
+      <p class="mark">Prompt Wars</p>
+      <h1>Image Wars</h1>
+    </header>
+    <section id="login" class="card hidden">
+      <form id="login-form">
+        <label for="code">Entry code</label>
+        <input id="code" name="code" autocomplete="off" autocapitalize="characters" required>
+        <button type="submit">Enter</button>
+        <p id="login-error" class="error"></p>
+      </form>
+    </section>
+    <section id="status" class="card hidden"></section>
+    <section id="play" class="hidden"></section>
+  </main>
+  <script src="/static/play.js"></script>
+</body>
+</html>

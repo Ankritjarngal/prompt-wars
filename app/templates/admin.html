@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Wars admin</title>
+  <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+  <main id="app">
+    <header class="top">
+      <p class="mark">Prompt Wars</p>
+      <h1>Control</h1>
+    </header>
+    <section id="login" class="card">
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <button type="submit">Open panel</button>
+        <p id="login-error" class="error"></p>
+      </form>
+    </section>
+    <section id="panel" class="hidden">
+      <p id="mode" class="banner hidden"></p>
+      <section class="card">
+        <h2>Entry codes</h2>
+        <p class="help">The room can be 50, 55, or 60 people. Generate as many codes as you handed out. The cut below is separate from that number.</p>
+        <div class="row">
+          <input id="code-count" type="number" min="1" max="200" value="60">
+          <button id="make-codes" type="button">Generate codes</button>
+        </div>
+        <textarea id="codes" readonly rows="4"></textarea>
+      </section>
+      <div id="rounds"></div>
+      <section class="card">
+        <h2>Action log</h2>
+        <ol id="log"></ol>
+      </section>
+    </section>
+  </main>
+  <script src="/static/admin.js"></script>
+</body>
+</html>

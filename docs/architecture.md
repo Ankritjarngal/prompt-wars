@@ -10,6 +10,7 @@ app/config.py          env settings
 app/db.py              schema, queries, round transitions
 app/ranking.py         pure counting-score and rank functions
 app/scoring.py         real scorer, fake scorer, calibration inputs
+app/images.py          PNG/JPG check, size cap, hash
 app/flags.py           hash, perceptual hash, SSIM threshold
 app/worker.py          single-thread score queue
 app/templates/         play.html, admin.html
@@ -87,6 +88,7 @@ Player:
 
 - `POST /api/login` JSON `{code}`
 - `POST /api/logout`
+- `GET /api/health` — process is up, and whether the fake scorer is on
 - `GET /api/me` — screen state, timer, images, own scores, own rank. No flags.
 - `POST /api/uploads` multipart fields `reference_slot`, `attempt`, `prompt`, `file`
 - `GET /media/reference/{id}` — only while that round is live and the player is eligible, or with the admin cookie

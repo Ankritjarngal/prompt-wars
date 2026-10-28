@@ -1,0 +1,75 @@
+:root {
+  --bg: #17140f;
+  --ink: #f6f1e7;
+  --muted: #b7ad9d;
+  --line: #3c3428;
+  --card: #221e17;
+  --accent: #e4ff4a;
+  --accent-ink: #1b1b0d;
+  --hot: #ff5c38;
+  --paper: #f4efe4;
+  --paper-ink: #1b1814;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+main { max-width: 1100px; margin: 0 auto; padding: 28px 18px 64px; }
+.top h1 {
+  margin: 0;
+  font-family: Palatino, "Iowan Old Style", Georgia, serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.mark { margin: 0 0 4px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; font-size: 12px; }
+.card, .image-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 16px;
+}
+label { display: block; margin-bottom: 8px; color: var(--muted); }
+input, button, textarea {
+  font: inherit;
+}
+input[type="text"], input:not([type]), input[type="number"], input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #12100c;
+  color: var(--ink);
+}
+button {
+  margin-top: 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.45; cursor: default; }
+.error { color: var(--hot); min-height: 1.2em; }
+.hidden { display: none; }
+.meta { display: flex; justify-content: space-between; gap: 16px; align-items: end; }
+.timer { font-variant-numeric: tabular-nums; font-size: 28px; }
+.total { font-size: 32px; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.image-card { background: var(--paper); color: var(--paper-ink); }
+.image-card img { width: 100%; border-radius: 12px; background: #ddd; }
+.slots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.slot { border: 1px dashed #c9bfae; border-radius: 12px; padding: 8px; }
+.slot strong { display: block; }
+.counts { color: #5d6b12; }
+.note { width: 100%; margin-top: 8px; }
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+  .top h1 { font-size: 36px; }
+}

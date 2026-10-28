@@ -37,3 +37,5 @@ These are settled. Do not reopen them without adding a new dated row.
 | 2026-10-28 | Entry codes use `ABCDEFGHJKLMNPQRSTUVWXYZ23456789`, 8 characters. | Avoids 0/O and 1/I on a printed slip. |
 | 2026-10-28 | Admin actions are appended to a log the panel shows. | If something is changed mid-event, there is a record of who did what from this app. |
 | 2026-10-28 | The repo is private. | It will hold the shape of an event tool. Entry codes and `.env` still must not be committed. `data/` is gitignored. |
+| 2026-10-28 | Cut size is a number the admin types, default 30 / 10 / 3, allowed range 1–1000. It is not tied to 50 players. | A room of 55 or 60 uses the same app. Generate that many codes, then set how many advance. |
+| 2026-10-28 | Stress tests run on the laptop against the real HTTP app with the fake scorer. No cloud deploy for this pass. | Sixty sequential players and sixty parallel uploads finish locally in a few seconds. A free host that sleeps would make that test less honest, and the real models still belong on the event machine. |
